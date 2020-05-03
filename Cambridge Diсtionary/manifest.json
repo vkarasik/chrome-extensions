@@ -1,0 +1,21 @@
+{
+    "name": "Cambridge",
+    "version": "1.0",
+    "description": "Cambridge It",
+    "manifest_version": 2,
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "contextMenus",
+        "tabs"
+    ]
+}

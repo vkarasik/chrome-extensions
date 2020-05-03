@@ -1,0 +1,42 @@
+{
+    "name": "Font Changer",
+    "version": "1.0",
+    "description": "Extension to change font",
+    "manifest_version": 2,
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "page_action": {
+        "default_icon": "icon48.png",
+        "default_popup": "popup.html",
+        "default_title": "Change Font"
+    },
+    "background": {
+        "scripts": [
+            "eventPage.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://developer.chrome.com/*"
+            ],
+            "css": [
+                "myStyles.css"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "notifications",
+        "contextMenus",
+        "tabs",
+        "https://developer.chrome.com/*"
+    ]
+}
